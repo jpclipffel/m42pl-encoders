@@ -10,6 +10,7 @@ class MsgPack(Encoder):
     """
 
     _aliases_ = ['msgpack',]
+    _about_ = 'Support for MsgPack binary format'
 
     def _encode(self, data):
         return msgpack.packb(data)

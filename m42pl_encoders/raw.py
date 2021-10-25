@@ -11,6 +11,7 @@ class Raw(Encoder):
     """
 
     _aliases_ = ['raw',]
+    _about_ = 'Support for string format (debug only)'
 
     def _encode(self, data):
         return str(data)

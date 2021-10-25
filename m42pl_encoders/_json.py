@@ -13,6 +13,7 @@ class Json(Encoder):
     """
 
     _aliases_ = ['json',]
+    _about_ = 'Support for JSON text format'
 
     class _Encoder(json.JSONEncoder):
         """JSON encoder for :class:`Event`.
@@ -54,6 +55,7 @@ class HJson(Json):
     """
 
     _aliases_ = ['hjson',]
+    _about_ = 'Support for colored JSON text format'
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
