@@ -1,6 +1,12 @@
 import msgpack
-import msgpack_numpy as m
-m.patch()
+
+# Some MPL modules (like m42pl-cv) yields NumPy arrays, which are not
+# supported out of the box by msgpack.
+try:
+    import msgpack_numpy as m
+    m.patch()
+except ImportError:
+    pass
 
 from m42pl.encoders import Encoder
 
