@@ -8,8 +8,7 @@ setup(
   version='1.0.0',
   packages=['m42pl_encoders',],
   install_requires=[
-    'm42pl',
-    # ---
-    'msgpack',
+    'msgpack>=1.0.3',
+    'msgpack-numpy>=0.4.7.1'
   ]
 )
