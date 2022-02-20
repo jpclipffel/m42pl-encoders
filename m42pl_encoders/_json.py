@@ -26,8 +26,9 @@ class Json(Encoder):
             if isinstance(o, (set, tuple)):
                 return list(o)
             return {
-                'type': str(type(o)),
-                'repr': str(repr(o)),
+                # 'type': str(type(o)),
+                'type': o.__class__.__name__,
+                # 'repr': str(repr(o)),
                 'info': 'Data type not suitable for "json" formatter'
             }
 
